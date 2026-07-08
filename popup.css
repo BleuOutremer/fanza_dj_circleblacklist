@@ -1,0 +1,157 @@
+* { box-sizing: border-box; }
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 13px;
+  color: #222;
+  background: #fafafa;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.count {
+  font-size: 12px;
+  color: #666;
+}
+
+.add {
+  margin-bottom: 10px;
+}
+
+.add-row {
+  display: flex;
+  gap: 6px;
+}
+
+.add-row input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+#add-id {
+  flex: 0 0 110px;
+}
+
+.add-row button,
+footer button {
+  padding: 5px 10px;
+  border: 1px solid #1466b8;
+  border-radius: 4px;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.add-row button:hover { background: #1466cc; }
+
+.hint {
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #777;
+}
+
+.error {
+  margin: 6px 0 0;
+  color: #b00020;
+  font-size: 12px;
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info {
+  min-width: 0;
+}
+
+.item-name {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.item-name.unknown {
+  font-weight: 400;
+  color: #888;
+}
+
+.item-id {
+  font-size: 11px;
+  color: #999;
+}
+
+.unblock {
+  flex: 0 0 auto;
+  padding: 3px 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.unblock:hover { background: #f0f0f0; }
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 16px 0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  padding: 5px 8px;
+  border: none;
+  background: transparent;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 12px;
+}
+.link:hover { text-decoration: underline; }
+
+.danger {
+  background: #fff !important;
+  color: #b00020 !important;
+  border-color: #e0b4bc !important;
+}
+
+.danger:hover { background: #fdecef !important; }

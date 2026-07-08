@@ -1,0 +1,26 @@
+/* 非表示対象カードを完全に消す（一覧・ランキング共通） */
+.cf-hidden {
+  display: none !important;
+}
+
+/* サークル名の下に出す非表示ボタン */
+.cf-hide-btn {
+  display: inline-block;
+  margin: 3px 0 0;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #b00020;
+  background: #fff;
+  border: 1px solid #e0b4bc;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0.75;
+  transition: opacity 0.12s ease, background 0.12s ease;
+}
+
+.cf-hide-btn:hover {
+  opacity: 1;
+  background: #fdecef;
+}

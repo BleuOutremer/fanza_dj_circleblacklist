@@ -1,0 +1,202 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 14px;
+  color: #222;
+  background: #f2f3f5;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 13px;
+  color: #666;
+}
+
+.desc {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #777;
+}
+
+/* ジャンル */
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.genre-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.genre-item input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* 追加行 */
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.add-row input {
+  padding: 7px 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#add-name { flex: 1 1 auto; min-width: 0; }
+#add-id { flex: 0 0 150px; }
+
+button {
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary {
+  padding: 7px 16px;
+  border: 1px solid #1466b8;
+  background: #1a73e8;
+  color: #fff;
+}
+.primary:hover { background: #1466cc; }
+
+.error {
+  margin: 8px 0 0;
+  color: #b00020;
+  font-size: 13px;
+}
+
+/* 一覧テーブル */
+.list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.list th, .list td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.list th {
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+}
+
+.col-id { width: 120px; }
+.col-act { width: 130px; }
+
+.list .name-input {
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  background: transparent;
+}
+.list .name-input:hover { border-color: #ddd; }
+.list .name-input:focus {
+  border-color: #1a73e8;
+  background: #fff;
+  outline: none;
+}
+
+.list .id-cell {
+  color: #666;
+  font-variant-numeric: tabular-nums;
+}
+
+.list td.actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mini {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  margin-left: 6px;
+}
+.mini:hover { background: #f0f0f0; }
+.mini.saved { border-color: #1a8a3a; color: #1a8a3a; }
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 18px 0 6px;
+}
+
+.footer {
+  margin-top: 14px;
+  text-align: right;
+}
+
+.danger {
+  padding: 6px 14px;
+  background: #fff;
+  color: #b00020;
+  border: 1px solid #e0b4bc;
+}
+.danger:hover { background: #fdecef; }
+
+/* バックアップ */
+.backup-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.backup-row .mini { margin-left: 0; }
+
+.msg {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+.msg.ok { color: #1a8a3a; }
+.msg.error { color: #b00020; }

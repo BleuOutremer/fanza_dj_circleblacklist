@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="options.css">
+  <title>FANZA同人 サークルBlacklist — 設定</title>
+</head>
+<body>
+  <div class="wrap">
+    <h1>FANZA同人 サークルBlacklist — 設定</h1>
+
+    <section class="card">
+      <h2>カテゴリの表示切り替え</h2>
+      <p class="desc">
+        チェックを外したカテゴリの商品は、サークルに関係なく一覧・ランキングから非表示になります。
+        カテゴリは実際に閲覧したページから自動的に追加されます。
+      </p>
+      <div id="genre-list" class="genre-list"></div>
+    </section>
+
+    <section class="card">
+      <div class="sec-head">
+        <h2>非表示サークル</h2>
+        <span id="count" class="count">0件</span>
+      </div>
+
+      <div class="add-row">
+        <input id="add-name" type="text" placeholder="サークル名（任意）">
+        <input id="add-id" type="text" inputmode="numeric" placeholder="maker ID（数字）">
+        <button id="add-btn" type="button" class="primary">追加</button>
+      </div>
+      <p id="add-error" class="error" hidden></p>
+      <p class="desc">
+        maker ID は商品ページ内のサークルリンク（…/article=maker/id=<b>XXXXX</b>/）の数字部分です。
+        一覧・ランキングの各商品にある「🚫 非表示」ボタンからも登録できます。
+      </p>
+
+      <table class="list" id="table" hidden>
+        <thead>
+          <tr>
+            <th>サークル名</th>
+            <th class="col-id">maker ID</th>
+            <th class="col-act"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <p id="empty" class="empty" hidden>まだ登録されていません。</p>
+
+      <div class="footer">
+        <button id="clear-btn" type="button" class="danger">すべて解除</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>バックアップ</h2>
+      <p class="desc">
+        非表示サークルとジャンル設定を JSON ファイルに保存（エクスポート）／復元（インポート）します。
+        別のPCへ移すときや、設定を保存しておきたいときに使えます。
+      </p>
+      <div class="backup-row">
+        <button id="export-btn" type="button" class="primary">エクスポート</button>
+        <button id="import-btn" type="button" class="mini">インポート（追加）</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </div>
+      <p id="backup-msg" class="msg" hidden></p>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>サークル非表示リスト</title>
+</head>
+<body>
+  <header>
+    <h1>非表示サークル一覧</h1>
+    <span id="count" class="count">0件</span>
+  </header>
+
+  <section class="add">
+    <div class="add-row">
+      <input id="add-name" type="text" placeholder="サークル名（任意）">
+      <input id="add-id" type="text" inputmode="numeric" placeholder="maker ID（数字）">
+      <button id="add-btn" type="button">追加</button>
+    </div>
+    <p class="hint">
+      maker ID は商品ページ内のサークルリンク（…/article=maker/id=<b>XXXXX</b>/）の数字部分です。
+      一覧ページの各商品にある「🚫 非表示」ボタンからも登録できます。
+    </p>
+    <p id="add-error" class="error" hidden></p>
+  </section>
+
+  <ul id="list" class="list"></ul>
+  <p id="empty" class="empty" hidden>まだ登録されていません。</p>
+
+  <footer>
+    <button id="options-btn" type="button" class="link">⚙ 詳細設定</button>
+    <button id="clear-btn" type="button" class="danger">すべて解除</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

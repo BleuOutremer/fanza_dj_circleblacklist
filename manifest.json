@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "FANZA同人 サークルBlacklist",
+  "version": "1.0.0",
+  "description": "興味のないサークル、粗製乱造サークルを1クリックで非表示に。サイトの機能では実現できない複数ジャンルのフィルタも追加。",
+  "permissions": ["storage"],
+  "host_permissions": ["*://www.dmm.co.jp/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.dmm.co.jp/dc/doujin/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "非表示サークル"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
